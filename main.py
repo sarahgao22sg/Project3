@@ -58,6 +58,26 @@ def login():
 def load_user(user_id):
     return User(user_id)
 
+# Route to redirect - when the onload event occurs - to the login page directly
+@app.route("/")
+def hello():
+    # See line 40
+    return redirect(url_for('login'))
+
+# Must establish server link, probably rename select-dashboard
+@app.route("/homepage")
+@login_required
+def homepage(): #index with all the dashboards
+    with server.auth.sign_in(TABLEAU_AUTH):
+        workbooks, pagination_item = server.workbooks.get()
+               
+        wblist = [wb for wb in workbooks]
+        for x in wblist:      
+            server.workbooks.populate_preview_image(x)
+            if x.project_name == "yourWorkspace":
+                with open(folder_path  + "/{}.jpg".format(x.name), "wb") as img_file:   #generate thumbnails of all dashboards
+                    img_file.write(x.preview_image)
+    return render_template("select-dashboard.html")
 
 
 # # Start adding routes here
