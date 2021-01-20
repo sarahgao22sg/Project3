@@ -33,3 +33,23 @@ def is_safe_url(target):
     test_url = urlparse(urljoin(request.host_url, target))
     return test_url.scheme in ('http', 'https') and \
         ref_url.netloc == test_url.netloc
+
+# Route for handling the login page logic
+# Checks if user exists and password matches
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    error = None
+    if (request.method == 'POST'):
+        if (request.form['username'] not in users or request.form['password'] != password_login):
+            error = 'Invalid Credentials. Please try again.'
+        else:
+            user = User(users.index(request.form['username']))
+            login_user(user)
+            next = request.args.get('next')
+
+            if not is_safe_url(next):
+                return abort(400)
+
+            resp = make_response(redirect('/homepage'))
+
+# Start adding routes here
