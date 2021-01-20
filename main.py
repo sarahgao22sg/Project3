@@ -53,3 +53,8 @@ def login():
             resp = make_response(redirect('/homepage'))
 
 # Start adding routes here
+session = Session(engine)
+
+zebra_econ_df = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+
+session.close() 
