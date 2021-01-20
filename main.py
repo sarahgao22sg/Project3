@@ -52,9 +52,21 @@ def login():
 
             resp = make_response(redirect('/homepage'))
 
-# Start adding routes here
-session = Session(engine)
+# Wrong assumption
+# Used to by Flask to check which is the current logged user.
+@login_manager.user_loader
+def load_user(user_id):
+    return User(user_id)
 
-zebra_econ_df = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
 
-session.close() 
+
+# # Start adding routes here
+# session = Session(engine)
+
+# # Try to find TABLEAU EQUIV OF .READ_sql table name in Tableau?
+# zebra_econ_df = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+# gen_ov_df = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+# green_frogs = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+# dashie_B = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+
+# session.close() 
