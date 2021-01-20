@@ -96,6 +96,32 @@ def dashboard():
 @login_required
 def dashboard():
     return render_template("dashboard.html")
+
+# Ends Session for Tableau I suppose
+@app.route('/logout')
+def sign_out():
+    logout_user()
+    return redirect(url_for('login'))
+
+# Promise? Get-Response
+@app.route('/get_token')
+def get_token():
+    resp = make_response()
+
+    token = requests.post("http://10.0.55.1/trusted?username=" + request.cookies.get("username"))
+    if (token.status_code != 200 or token.text == '-1'): #200 = OK in HTTP requests
+        # Console.log error codes possibly- do check
+        return abort(400)
+
+    resp.set_cookie("auth_token", token.text)
+    return resp
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
+
+
+
 # # Start adding routes here
 # session = Session(engine)
 
