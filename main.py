@@ -79,7 +79,23 @@ def homepage(): #index with all the dashboards
                     img_file.write(x.preview_image)
     return render_template("select-dashboard.html")
 
+# Successive app routes, flaskin it
+@app.route("/Economic_Impact")    #page of a single dashboard
+@login_required
+def dashboard():
+    # Verify data storage type/structure here
+    return render_template("Economic_Impact.html")
 
+@app.route("/Green_Frogs")    #page of a single dashboard
+@login_required
+def dashboard():
+    # Verify data storage type/structure here
+    return render_template("Economic_Impact.html")
+
+@app.route("/Invasion!")    #page of a single dashboard
+@login_required
+def dashboard():
+    return render_template("dashboard.html")
 # # Start adding routes here
 # session = Session(engine)
 
