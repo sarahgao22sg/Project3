@@ -23,23 +23,23 @@
   <header>  
     <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light trn">
       <div class="container-fluid">
-          <a class="navbar-brand" href="#">Group 8</a>
+          <a class="navbar-brand" href="#">Group 10</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link nav-link-ltr" href="index.html">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link nav-link-ltr" href="index.html">HOME! <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-ltr" href="Green_Frogs.html">Green Frogs</a>
+              <a class="nav-link nav-link-ltr" href="Green_Frogs.html">GREEN FROGS!</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-ltr" href="Economic_Impact.html">Economic Impact</a>
+              <a class="nav-link nav-link-ltr" href="Economic_Impact.html">ECONOMIC IMPACT!</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-ltr" href="INVASION!.html">Invasion</a>
+              <a class="nav-link nav-link-ltr" href="INVASION!.html">INVASION!</a>
             </li>
           </ul>
         </div>
