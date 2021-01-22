@@ -7,9 +7,8 @@ from secret import SECRET_KEY, TABLEAU_AUTH, USERS_LIST, PASSWORD_LOGIN
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
 login_manager = LoginManager(app)
-users = npipkins@yahoo.com
-password_login = password1!
-
+users = "npipkins@yahoo.com"
+password_login = "password_1"
 # Tableau server
 server = TSC.Server('http://10.0.55.1')
 folder_path = "C:/Users/Administrator/Desktop/Flask-WebServer/static/images"
