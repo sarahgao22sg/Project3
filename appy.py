@@ -2,14 +2,13 @@ from flask import Flask, abort, render_template, redirect, url_for, request, mak
 from flask_login import LoginManager, login_required, UserMixin, login_user, logout_user
 from urllib.parse import urlparse, urljoin
 import requests
-
+# from secret import SECRET_KEY, TABLEAU_AUTH, USERS_LIST, PASSWORD_LOGIN
 
 app = Flask(__name__)
 app.config['secret_key'] = b'randomstring'
 login_manager = LoginManager(app)
 users = ["npipkins@yahoo.com"]
 password_login = "password_1"
-
 # Tableau server
 # server = TSC.Server('http://10.0.55.1')
 folder_path = "C:/Users/Administrator/Desktop/Flask-WebServer/static/images"
@@ -24,6 +23,7 @@ class User(UserMixin):
 
     def get(self, name):
         return users.index(name)
+
         # Check if url to render is safe
 
 # Query address        
@@ -72,7 +72,15 @@ def data():
 @app.route("/homepage")
 @login_required
 def homepage(): #index with all the dashboards
-
+    # with server.auth.sign_in(TABLEAU_AUTH):
+    #     workbooks, pagination_item = server.workbooks.get()
+               
+    #     wblist = [wb for wb in workbooks]
+    #     for x in wblist:      
+    #         server.workbooks.populate_preview_image(x)
+    #         if x.project_name == "yourWorkspace":
+    #             with open(folder_path  + "/{}.jpg".format(x.name), "wb") as img_file:   #generate thumbnails of all dashboards
+    #                 img_file.write(x.preview_image)
     return render_template("select-dashboard.html")
 
 # Successive app routes, flaskin it
@@ -114,3 +122,17 @@ def get_token():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+# # Start adding routes here
+# session = Session(engine)
+
+# # Try to find TABLEAU EQUIV OF .READ_sql table name in Tableau?
+# zebra_econ_df = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+# gen_ov_df = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+# green_frogs = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+# dashie_B = pd.read_sql(session.query(table.Author, table.Start_Year, table.End_Year, table.Number_of_Years, table.Geographic_Area, table.Dollar_Value, table.Type, table.Specifics, table.Outcomes, con=engine)
+
+# session.close() 
