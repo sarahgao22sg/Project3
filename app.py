@@ -64,6 +64,11 @@ def hello():
     # See line 40
     return redirect(url_for('login'))
 
+@app.route("/api/data")
+def data():
+
+    return jsonify(table_df.to_dict(orient='records'))
+
 # Must establish server link, probably rename select-dashboard
 @app.route("/homepage")
 @login_required
