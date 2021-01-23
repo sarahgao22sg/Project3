@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     # See line 40
-    return render_template("index.html")
+    return render_template("Invasion Spread.html")
 
 # Successive app routes, flaskin it
 @app.route("/Economic impact")    #page of a single dashboard
