@@ -1,7 +1,4 @@
 from flask import Flask, abort, render_template, redirect, url_for, request, make_response
-from flask_login import LoginManager, login_required, UserMixin, login_user, logout_user
-from urllib.parse import urlparse, urljoin
-import requests
 
 
 app = Flask(__name__)
@@ -10,25 +7,24 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     # See line 40
-    return render_template("Invasion Spread.html")
+    return render_template("index.html")
 
 # Successive app routes, flaskin it
-@app.route("/Economic impact")    #page of a single dashboard
-@login_required
-def dashboard():
-    # Verify data storage type/structure here
-    return render_template("Economic impact.html")
+@app.route("/econ")  
+def econ():
+    return render_template("Economic Impact.html")
 
-@app.route("/Frog and Zebra Muscles Graph")    #page of a single dashboard
-@login_required
-def frogs():
-    # Verify data storage type/structure here
+@app.route("/mussels")    
+def mussels():
     return render_template("Frog and Zebra Muscles Graph.html")
 
-@app.route("/Density")    #page of a single dashboard
-@login_required
-def invasion():
+@app.route("/density")   
+def density():
     return render_template("Density.html")
+
+@app.route("/invasion")  
+def invasion():
+    return render_template("Invasion Spread.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
