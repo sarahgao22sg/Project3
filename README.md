@@ -107,19 +107,6 @@
 
      *  (Free API) – version 2 Texas Labor Market Labor Data 
 
- **Rough Breakdown of Tasks:** 
-
-    • Creating the GitHub – Tia – Done 
-    • Obtain data sets from the hospital – Janette 
-    • Clean up COVID-19 API – Krishna 
-    • Clean up BLS API – Anthony 
-    • Create MatPlotLib Visualizations: 
-        o (2) Geo Map Visualizations – Krishna 
-        o (3) Line Graphs – Date/Time – Anthony & Janette 
-        o (2) Bar Graphs – Tia 
-        o (2) Scatter Plot – Josh 
-    • Statistic Measures and Box Plot – Josh 
-    • Write Up/Presentation (Power Point and Readme) – ALL
 
 ### Conclusions:
 
