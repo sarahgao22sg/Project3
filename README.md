@@ -91,22 +91,27 @@
 ### Research Questions and Answers:
 
  **Make an Assumption–** 
-    1. Unemployment Rates and Claims are directly correlated to COVID-19 cases/deaths (Comparing July 2019 and July 2020 data)
-
-    2. How have the different species dispersion changed over time?
+ 
+    1. How have the different species dispersion changed over time?
     
-    3. Do the species densities seem to follow any regular patterns or cycles?
+    2. Do the species densities seem to follow any regular patterns or cycles?
     
-    4. How has the economy been impacted from the zebra mussel species?
+    3. How has the economy been impacted from the zebra mussel species?
 
  **Data Sets to be Used:** 
 
-     *   Patient COVID-19 Test Results Api.tracking.com 
+     *   https://dec.vermont.gov/watershed/lakes-ponds/aquatic-invasives/monitoring/zebra-mussels
+         USED FOR MACHINE LEARNING MODEL - zebra mussel larvae collection data: collecting_zebra.csv
 
-     *  Daily State (TX & NY) Bureau Labor Statistics (BLS) Data 
+     *  https://nas.er.usgs.gov/queries/factsheet.aspx?speciesID=5
+        JOINED WITH OTHER NAS DATASET FOR VIZ - mussel sighting data: Exotic – Zebra Mussels.csv
 
-     *  (Free API) – version 2 Texas Labor Market Labor Data 
+     *  https://nas.er.usgs.gov/queries/FactSheet.aspx?speciesID=61
+        JOINED WITH OTHER NAS DATASET FOR VIZ - frog sighting data: Exotic – Greenhouse Frog.csv 
 
+     * https://www.epa.gov/sites/production/files/2014-12/documents/economic_impacts_of_aquatic_invasive_species.pdf
+       USED FOR IMPACT - Economic Impacts of Zebra Mussels: zebra_mussel_economic_impact_facts.csv
+ 
 
 ### Conclusions:
 
