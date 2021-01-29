@@ -93,11 +93,11 @@
  **Make an Assumption–** 
     1. Unemployment Rates and Claims are directly correlated to COVID-19 cases/deaths (Comparing July 2019 and July 2020 data)
 
-    2. Have any specific industries affected more than others?
+    2. How have the different species dispersion changed over time?
     
-    3. Which age-group is most impacted?
+    3. Do the species densities seem to follow any regular patterns or cycles?
     
-    4. Compare TX and NY and perform t-tests, calculate p-value etc.
+    4. How has the economy been impacted from the zebra mussel species?
 
  **Data Sets to be Used:** 
 
