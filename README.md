@@ -22,7 +22,7 @@
 
 ### Project Description/Outline: 
 
-    • Analysis of invasive species zebra mussle and Greenhouse frog. Invasive species cause ecological, environmental, and economic damage.
+    • Analysis of invasive species zebra mussel and Greenhouse frog. Invasive species cause ecological, environmental, and economic damage.
       The impacts of invasive species on our natural ecosystems and economy cost billions of dollars each year.
       
     • Analysis the spread of zebra mussle and Greenhouse frog in the United States. 
